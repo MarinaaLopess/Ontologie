@@ -126,7 +126,7 @@ Cette ontologie est distribuée sous licence **Creative Commons Attribution 4.0 
 
 ---
 
-## 🧰 Outils utilisés
+## Outils utilisés
 
 * Protégé
 * OWL / RDF
