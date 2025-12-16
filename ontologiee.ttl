@@ -1,0 +1,1647 @@
+@prefix : <http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/> .
+
+<http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/a_pour_niveau_de_difficulté
+:a_pour_niveau_de_difficulté rdf:type owl:ObjectProperty ;
+                             rdfs:domain :Type_de_Plats ;
+                             rdfs:range :Niveau_de_Difficulté .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/appartientÀ
+:appartientÀ rdf:type owl:ObjectProperty ;
+             rdfs:domain :Type_de_Plats ;
+             rdfs:range :Origine_Culturelle .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/convientPour
+:convientPour rdf:type owl:ObjectProperty ;
+              rdfs:domain :Type_de_Plats ;
+              rdfs:range :Regime_Alimentaire .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/estAssociéÀ
+:estAssociéÀ rdf:type owl:ObjectProperty ;
+             rdfs:domain :Desserts ;
+             rdfs:range :Boissons .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/estDeSaison
+:estDeSaison rdf:type owl:ObjectProperty ;
+             rdfs:domain :Type_de_Plats ;
+             rdfs:range :Saison .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/estPréparéAvec
+:estPréparéAvec rdf:type owl:ObjectProperty ;
+                rdfs:domain :Type_de_Plats ;
+                rdfs:range :Ingredients .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/estServiLorsDe
+:estServiLorsDe rdf:type owl:ObjectProperty ;
+                rdfs:domain :Type_de_Plats ;
+                rdfs:range :Evenements .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/estTypiqueDe
+:estTypiqueDe rdf:type owl:ObjectProperty ;
+              rdfs:domain :Type_de_Plats ;
+              rdfs:range :Origine_Geographique .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/est_prêt_au_bout_de
+:est_prêt_au_bout_de rdf:type owl:ObjectProperty ;
+                     rdfs:domain :Tajines ;
+                     rdfs:range :Temps_de_Preparation .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/requiertTechniqueDeCuisson
+:requiertTechniqueDeCuisson rdf:type owl:ObjectProperty ;
+                            rdfs:domain :Type_de_Plats ;
+                            rdfs:range :Technique_de_Cuisson .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/seBoitAvec
+:seBoitAvec rdf:type owl:ObjectProperty ;
+            rdfs:domain :Boissons ;
+            rdfs:range :Type_de_Plats .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/seConsommePendant
+:seConsommePendant rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Boissons ,
+                               :Type_de_Plats ;
+                   rdfs:range :Evenements .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/utilise
+:utilise rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/calories
+:calories rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:float ;
+          rdfs:comment "Valeur énergétique" .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/description
+:description rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Courte description textuelle" .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/estVégétarien
+:estVégétarien rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:boolean ;
+               rdfs:comment "Vrai ou faux" .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/estÉpicé
+:estÉpicé rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:boolean ;
+          rdfs:comment "Le plat est-il épicé ?" .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/niveauDifficulté
+:niveauDifficulté rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Facile, moyen, difficile" .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/nomAlternatif
+:nomAlternatif rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Autre nom du plat" .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/quantité
+:quantité rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Exemple : \"100g\", \"2 cuillères\"" .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/saison
+:saison rdf:type owl:DatatypeProperty ;
+        rdfs:range xsd:string ;
+        rdfs:comment "Saison d'utilisation : été, hiver, etc." .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/tempsCuisson
+:tempsCuisson rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:integer ;
+              rdfs:comment "Temps de cuisson en minutes" .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/tempsPréparation
+:tempsPréparation rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:integer ;
+                  rdfs:comment "Temps de préparation" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Boissons
+:Boissons rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Chaude
+:Chaude rdf:type owl:Class ;
+        rdfs:subClassOf :Boissons .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Couscous
+:Couscous rdf:type owl:Class ;
+          rdfs:subClassOf :Plats_principaux .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Desserts
+:Desserts rdf:type owl:Class ;
+          rdfs:subClassOf :Type_de_Plats .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Entrees
+:Entrees rdf:type owl:Class ;
+         rdfs:subClassOf :Type_de_Plats .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Epices
+:Epices rdf:type owl:Class ;
+        rdfs:subClassOf :Ingredients .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Evenements
+:Evenements rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Froide
+:Froide rdf:type owl:Class ;
+        rdfs:subClassOf :Boissons .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Fruits
+:Fruits rdf:type owl:Class ;
+        rdfs:subClassOf :Ingredients .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Fruits_sec
+:Fruits_sec rdf:type owl:Class ;
+            rdfs:subClassOf :Ingredients .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Ingredients
+:Ingredients rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Legumes
+:Legumes rdf:type owl:Class ;
+         rdfs:subClassOf :Ingredients .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Niveau_de_Difficulté
+:Niveau_de_Difficulté rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Origine_Culturelle
+:Origine_Culturelle rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Origine_Geographique
+:Origine_Geographique rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Pains
+:Pains rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Plats_principaux
+:Plats_principaux rdf:type owl:Class ;
+                  rdfs:subClassOf :Type_de_Plats .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Regime_Alimentaire
+:Regime_Alimentaire rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Saison
+:Saison rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Soupes
+:Soupes rdf:type owl:Class ;
+        rdfs:subClassOf :Entrees .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Street_food
+:Street_food rdf:type owl:Class ;
+             rdfs:subClassOf :Type_de_Plats .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Tajines
+:Tajines rdf:type owl:Class ;
+         rdfs:subClassOf :Plats_principaux .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Technique_de_Cuisson
+:Technique_de_Cuisson rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Temps_de_Preparation
+:Temps_de_Preparation rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Type_de_Plats
+:Type_de_Plats rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Types_de_Viandes
+:Types_de_Viandes rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Ustensiles
+:Ustensiles rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Viandes
+:Viandes rdf:type owl:Class ;
+         rdfs:subClassOf :Ingredients .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18#+_de_2h
+<http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18#+_de_2h> rdf:type owl:NamedIndividual ,
+                                                                                                     :Temps_de_Preparation ;
+                                                                                            rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18#0_à_30min
+<http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18#0_à_30min> rdf:type owl:NamedIndividual ,
+                                                                                                       :Temps_de_Preparation ;
+                                                                                              rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18#1h_à_2h
+<http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18#1h_à_2h> rdf:type owl:NamedIndividual ,
+                                                                                                     :Temps_de_Preparation ;
+                                                                                            rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18#3dess
+<http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18#3dess> rdf:type owl:NamedIndividual ,
+                                                                                                   :Plats_principaux ;
+                                                                                          :a_pour_niveau_de_difficulté :Facile ;
+                                                                                          :estPréparéAvec :Lentilles ;
+                                                                                          :est_prêt_au_bout_de <http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18#30min_à_1h> ;
+                                                                                          :requiertTechniqueDeCuisson :Mijoté ;
+                                                                                          rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18#30min_à_1h
+<http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18#30min_à_1h> rdf:type owl:NamedIndividual ,
+                                                                                                        :Temps_de_Preparation ;
+                                                                                               rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Abricots
+:Abricots rdf:type owl:NamedIndividual ,
+                   :Fruits_sec ;
+          rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Agneau
+:Agneau rdf:type owl:NamedIndividual ,
+                 :Viandes ;
+        rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Aid_al_Adha
+:Aid_al_Adha rdf:type owl:NamedIndividual ,
+                      :Evenements ;
+             rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Amandes
+:Amandes rdf:type owl:NamedIndividual ,
+                  :Fruits_sec ;
+         rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Anis
+:Anis rdf:type owl:NamedIndividual ,
+               :Epices ;
+      rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Arkhsis
+:Arkhsis rdf:type owl:NamedIndividual ,
+                  :Pains ;
+         rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Au_four
+:Au_four rdf:type owl:NamedIndividual ,
+                  :Technique_de_Cuisson ;
+         rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Aubergine
+:Aubergine rdf:type owl:NamedIndividual ,
+                    :Legumes ;
+           rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Automne
+:Automne rdf:type owl:NamedIndividual ,
+                  :Saison ;
+         rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Avocat
+:Avocat rdf:type owl:NamedIndividual ,
+                 :Fruits ;
+        rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Badiane
+:Badiane rdf:type owl:NamedIndividual ,
+                  :Epices ;
+         rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Baghrir
+:Baghrir rdf:type owl:NamedIndividual ,
+                  :Desserts ;
+         rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Batbout
+:Batbout rdf:type owl:NamedIndividual ,
+                  :Pains ;
+         rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Bayd_o_maticha
+:Bayd_o_maticha rdf:type owl:NamedIndividual ,
+                         :Plats_principaux ;
+                :a_pour_niveau_de_difficulté :Facile ;
+                :estPréparéAvec :Oeufs ;
+                :est_prêt_au_bout_de <http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18#30min_à_1h> ;
+                rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Bebouch
+:Bebouch rdf:type owl:NamedIndividual ,
+                  :Street_food ;
+         rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Berred
+:Berred rdf:type owl:NamedIndividual ,
+                 :Ustensiles ;
+        rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Bissara
+:Bissara rdf:type owl:NamedIndividual ,
+                  :Soupes ;
+         :estPréparéAvec :Feves ;
+         :estTypiqueDe :Region_du_Rif ;
+         :requiertTechniqueDeCuisson :Mijoté ;
+         rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Boeuf
+:Boeuf rdf:type owl:NamedIndividual ,
+                :Viandes ;
+       rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Boulfaf
+:Boulfaf rdf:type owl:NamedIndividual ,
+                  :Street_food ;
+         rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Bouzroug
+:Bouzroug rdf:type owl:NamedIndividual ,
+                   :Plats_principaux ;
+          :a_pour_niveau_de_difficulté :Facile ;
+          :estAssociéÀ :Poisson ;
+          rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Braisé
+:Braisé rdf:type owl:NamedIndividual ,
+                 :Technique_de_Cuisson ;
+        rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Bricks
+:Bricks rdf:type owl:NamedIndividual ,
+                 :Entrees ;
+        :seConsommePendant :Ramadan ;
+        rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Briouates_sucrées
+:Briouates_sucrées rdf:type owl:NamedIndividual ,
+                            :Desserts ;
+                   rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Cacahuetes
+:Cacahuetes rdf:type owl:NamedIndividual ,
+                     :Fruits_sec ;
+            rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Calentita
+:Calentita rdf:type owl:NamedIndividual ,
+                    :Street_food ;
+           rdfs:label ""@es .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Cannelle
+:Cannelle rdf:type owl:NamedIndividual ,
+                   :Epices ;
+          rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Cardamome
+:Cardamome rdf:type owl:NamedIndividual ,
+                    :Epices ;
+           rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Carotte
+:Carotte rdf:type owl:NamedIndividual ,
+                  :Legumes ;
+         rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Cerneaux_de_noix
+:Cerneaux_de_noix rdf:type owl:NamedIndividual ,
+                           :Fruits_sec ;
+                  rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Chameau
+:Chameau rdf:type owl:NamedIndividual ,
+                  :Viandes ;
+         rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Chebakia
+:Chebakia rdf:type owl:NamedIndividual ,
+                   :Desserts ;
+          :estAssociéÀ :The_a_la_menthe ;
+          :estPréparéAvec :Miel ;
+          rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Chorba
+:Chorba rdf:type owl:NamedIndividual ,
+                 :Soupes ;
+        :requiertTechniqueDeCuisson :Mijoté ;
+        rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Châria_au_lait
+:Châria_au_lait rdf:type owl:NamedIndividual ,
+                         :Soupes ;
+                :requiertTechniqueDeCuisson :Mijoté ;
+                rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Chèvre
+:Chèvre rdf:type owl:NamedIndividual ,
+                 :Viandes ;
+        rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Citrouille
+:Citrouille rdf:type owl:NamedIndividual ,
+                     :Legumes ;
+            rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Clous_de_girofle
+:Clous_de_girofle rdf:type owl:NamedIndividual ,
+                           :Epices ;
+                  rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Concombre
+:Concombre rdf:type owl:NamedIndividual ,
+                    :Legumes ;
+           :estPréparéAvec :Tomates ;
+           rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Confit
+:Confit rdf:type owl:NamedIndividual ,
+                 :Technique_de_Cuisson ;
+        rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Cornes_de_gazelles
+:Cornes_de_gazelles rdf:type owl:NamedIndividual ,
+                             :Desserts ;
+                    :a_pour_niveau_de_difficulté :Difficile .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Courgette
+:Courgette rdf:type owl:NamedIndividual ,
+                    :Legumes ;
+           rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Couscous_Tfeya
+:Couscous_Tfeya rdf:type owl:NamedIndividual ,
+                         :Couscous ;
+                :a_pour_niveau_de_difficulté :Intermédiaire ;
+                :estPréparéAvec :Couscoussier ,
+                                :Navet ;
+                :requiertTechniqueDeCuisson :Mijoté ,
+                                            :Vapeur ;
+                :seBoitAvec :Lben ;
+                :seConsommePendant :Jumuaa .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Couscous_au_Gueddid
+:Couscous_au_Gueddid rdf:type owl:NamedIndividual ,
+                              :Couscous ;
+                     :a_pour_niveau_de_difficulté :Intermédiaire ;
+                     :requiertTechniqueDeCuisson :Mijoté ,
+                                                 :Vapeur .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Couscous_aux_7_légumes
+:Couscous_aux_7_légumes rdf:type owl:NamedIndividual ,
+                                 :Couscous ;
+                        :a_pour_niveau_de_difficulté :Intermédiaire ;
+                        :estPréparéAvec :Boeuf ;
+                        :requiertTechniqueDeCuisson :Mijoté ,
+                                                    :Vapeur .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Couscous_aux_fèves
+:Couscous_aux_fèves rdf:type owl:NamedIndividual ,
+                             :Couscous ;
+                    :a_pour_niveau_de_difficulté :Intermédiaire ;
+                    :estPréparéAvec :Feves ;
+                    :requiertTechniqueDeCuisson :Mijoté ,
+                                                :Vapeur .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Couscous_belboula
+:Couscous_belboula rdf:type owl:NamedIndividual ,
+                            :Couscous ;
+                   :a_pour_niveau_de_difficulté :Intermédiaire ;
+                   :requiertTechniqueDeCuisson :Mijoté ,
+                                               :Vapeur .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Couscoussier
+:Couscoussier rdf:type owl:NamedIndividual ,
+                       :Ustensiles ;
+              rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Cuisine_amazigh
+:Cuisine_amazigh rdf:type owl:NamedIndividual ,
+                          :Origine_Culturelle ;
+                 rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Cuisine_andalouse
+:Cuisine_andalouse rdf:type owl:NamedIndividual ,
+                            :Origine_Culturelle ;
+                   rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Cuisine_arabo_musulmane_medievale
+:Cuisine_arabo_musulmane_medievale rdf:type owl:NamedIndividual ,
+                                            :Origine_Culturelle ;
+                                   rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Cumin
+:Cumin rdf:type owl:NamedIndividual ,
+                :Epices ;
+       rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Curcuma
+:Curcuma rdf:type owl:NamedIndividual ,
+                  :Epices ;
+         rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Dattes
+:Dattes rdf:type owl:NamedIndividual ,
+                 :Fruits ;
+        rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Difficile
+:Difficile rdf:type owl:NamedIndividual ,
+                    :Niveau_de_Difficulté ;
+           rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Dinde
+:Dinde rdf:type owl:NamedIndividual ,
+                :Viandes ;
+       rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Douez
+:Douez rdf:type owl:NamedIndividual ,
+                :Plats_principaux ;
+       :a_pour_niveau_de_difficulté :Intermédiaire ;
+       :estAssociéÀ :Khobz ;
+       rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Dromadaire
+:Dromadaire rdf:type owl:NamedIndividual ,
+                     :Viandes ;
+            rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Epinards
+:Epinards rdf:type owl:NamedIndividual ,
+                   :Legumes ;
+          rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Ete
+:Ete rdf:type owl:NamedIndividual ,
+              :Saison ;
+     rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Facile
+:Facile rdf:type owl:NamedIndividual ,
+                 :Niveau_de_Difficulté ;
+        rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Fekkas
+:Fekkas rdf:type owl:NamedIndividual ,
+                 :Desserts ;
+        rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Fenouil
+:Fenouil rdf:type owl:NamedIndividual ,
+                  :Epices ;
+         rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Feuilles_de_Laurier
+:Feuilles_de_Laurier rdf:type owl:NamedIndividual ,
+                              :Epices ;
+                     rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Feuilles_de_mauves
+:Feuilles_de_mauves rdf:type owl:NamedIndividual ,
+                             :Legumes ;
+                    rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Feves
+:Feves rdf:type owl:NamedIndividual ,
+                :Legumes ;
+       rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Figues
+:Figues rdf:type owl:NamedIndividual ,
+                 :Fruits ;
+        rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Frit
+:Frit rdf:type owl:NamedIndividual ,
+               :Technique_de_Cuisson ;
+      rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Fumé
+:Fumé rdf:type owl:NamedIndividual ,
+               :Technique_de_Cuisson ;
+      rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Fèves_à_la_marocaine
+:Fèves_à_la_marocaine rdf:type owl:NamedIndividual ,
+                               :Entrees ;
+                      :estPréparéAvec :Feves .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Ghriba
+:Ghriba rdf:type owl:NamedIndividual ,
+                 :Desserts ;
+        rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Ghrina_Bahla
+:Ghrina_Bahla rdf:type owl:NamedIndividual ,
+                       :Desserts ;
+              rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Gingembre
+:Gingembre rdf:type owl:NamedIndividual ,
+                    :Epices ;
+           rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Grillé
+:Grillé rdf:type owl:NamedIndividual ,
+                 :Technique_de_Cuisson ;
+        rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Guesâa
+:Guesâa rdf:type owl:NamedIndividual ,
+                 :Ustensiles ;
+        rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Harcha
+:Harcha rdf:type owl:NamedIndividual ,
+                 :Pains ;
+        rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Haricot_blanc
+:Haricot_blanc rdf:type owl:NamedIndividual ,
+                        :Legumes ;
+               rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Haricot_vert
+:Haricot_vert rdf:type owl:NamedIndividual ,
+                       :Legumes ;
+              rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Harira
+:Harira rdf:type owl:NamedIndividual ,
+                 :Soupes ;
+        :requiertTechniqueDeCuisson :Mijoté ;
+        rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Hiver
+:Hiver rdf:type owl:NamedIndividual ,
+                :Saison ;
+       rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Hssouwa
+:Hssouwa rdf:type owl:NamedIndividual ,
+                  :Soupes ;
+         :requiertTechniqueDeCuisson :Mijoté ;
+         :nomAlternatif "Askif" ;
+         rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Infusion_a_la_verveine
+:Infusion_a_la_verveine rdf:type owl:NamedIndividual ,
+                                 :Boissons ,
+                                 :Chaude ;
+                        :estAssociéÀ :Miel ;
+                        :estDeSaison :Hiver ;
+                        rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Infusion_au_thym
+:Infusion_au_thym rdf:type owl:NamedIndividual ,
+                           :Boissons ,
+                           :Chaude ;
+                  :estAssociéÀ :Miel ;
+                  :estDeSaison :Hiver ;
+                  rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Intermédiaire
+:Intermédiaire rdf:type owl:NamedIndividual ,
+                        :Niveau_de_Difficulté ;
+               rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Jawhara
+:Jawhara rdf:type owl:NamedIndividual ,
+                  :Desserts ;
+         rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Jelija
+:Jelija rdf:type owl:NamedIndividual ,
+                 :Desserts ;
+        :nomAlternatif "Rkhama"@ar-ma ;
+        rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Jumuaa
+:Jumuaa rdf:type owl:NamedIndividual ,
+                 :Evenements ;
+        rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Jus_d_avocat
+:Jus_d_avocat rdf:type owl:NamedIndividual ,
+                       :Boissons ,
+                       :Froide ;
+              :estDeSaison :Ete ;
+              :estPréparéAvec :Avocat ;
+              rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Jus_de_carotte_et_d_orange
+:Jus_de_carotte_et_d_orange rdf:type owl:NamedIndividual ,
+                                     :Boissons ,
+                                     :Froide ;
+                            :estDeSaison :Ete ;
+                            :estPréparéAvec :Carotte ,
+                                            :Oranges ;
+                            rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Ker3in
+:Ker3in rdf:type owl:NamedIndividual ,
+                 :Plats_principaux ;
+        :a_pour_niveau_de_difficulté :Difficile ;
+        :convientPour :Omnivore ;
+        :estPréparéAvec :Veau ;
+        rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Kesskess
+:Kesskess rdf:type owl:NamedIndividual ,
+                   :Ustensiles ;
+          rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Khobz
+:Khobz rdf:type owl:NamedIndividual ,
+                :Pains ;
+       rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Khoubiza
+:Khoubiza rdf:type owl:NamedIndividual ,
+                   :Entrees ;
+          :estPréparéAvec :Feuilles_de_mauves ;
+          rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Khringo
+:Khringo rdf:type owl:NamedIndividual ,
+                  :Desserts ;
+         rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Krachel
+:Krachel rdf:type owl:NamedIndividual ,
+                  :Pains ;
+         rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Lapin
+:Lapin rdf:type owl:NamedIndividual ,
+                :Viandes ;
+       rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Lben
+:Lben rdf:type owl:NamedIndividual ,
+               :Boissons ,
+               :Froide ;
+      :seConsommePendant :Ramadan ;
+      :description "Lait Fermenté" ;
+      rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Lentilles
+:Lentilles rdf:type owl:NamedIndividual ,
+                    :Ingredients ;
+           rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Lham_rass
+:Lham_rass rdf:type owl:NamedIndividual ,
+                    :Plats_principaux ;
+           :a_pour_niveau_de_difficulté :Intermédiaire ;
+           :estPréparéAvec :Mouton ;
+           :requiertTechniqueDeCuisson :Grillé ;
+           rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Lièvre
+:Lièvre rdf:type owl:NamedIndividual ,
+                 :Viandes ;
+        rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Loubia
+:Loubia rdf:type owl:NamedIndividual ,
+                 :Plats_principaux ;
+        :a_pour_niveau_de_difficulté :Facile ;
+        :estPréparéAvec :Haricot_blanc ;
+        :requiertTechniqueDeCuisson :Mijoté ;
+        :description "Le mot \"loubia\" signifie \"haricot\". Ici, en l'occurence, ce sont des haricots blancs qui sont désignés par ce terme."@ar-ma ;
+        rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Majmar
+:Majmar rdf:type owl:NamedIndividual ,
+                 :Ustensiles ;
+        rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Mariages
+:Mariages rdf:type owl:NamedIndividual ,
+                   :Evenements ;
+          rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Maâkouda
+:Maâkouda rdf:type owl:NamedIndividual ,
+                   :Street_food ;
+          rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Mehrach
+:Mehrach rdf:type owl:NamedIndividual ,
+                  :Pains ;
+         :nomAlternatif "Pain à l'orge" ;
+         rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Mehraz
+:Mehraz rdf:type owl:NamedIndividual ,
+                 :Ustensiles ;
+        rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Mghorfa
+:Mghorfa rdf:type owl:NamedIndividual ,
+                  :Ustensiles ;
+         rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Mhencha
+:Mhencha rdf:type owl:NamedIndividual ,
+                  :Desserts ;
+         rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Mhimsa_au_lait
+:Mhimsa_au_lait rdf:type owl:NamedIndividual ,
+                         :Soupes ;
+                :requiertTechniqueDeCuisson :Mijoté ;
+                rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Miel
+:Miel rdf:type owl:NamedIndividual ,
+               :Ingredients ;
+      rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Mijoté
+:Mijoté rdf:type owl:NamedIndividual ,
+                 :Technique_de_Cuisson ;
+        rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Mimi
+:Mimi rdf:type owl:NamedIndividual ,
+               :Desserts ;
+      rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Mkhamer
+:Mkhamer rdf:type owl:NamedIndividual ,
+                  :Pains ;
+         :estAssociéÀ :Batbout ;
+         :estPréparéAvec :Miel ;
+         :seBoitAvec :The_a_la_menthe ;
+         :nomAlternatif "Chiyer"@ar-ma ;
+         rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Mouton
+:Mouton rdf:type owl:NamedIndividual ,
+                 :Viandes ;
+        rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Msemen_farcie
+:Msemen_farcie rdf:type owl:NamedIndividual ,
+                        :Street_food ;
+               :seBoitAvec :The_a_la_menthe ;
+               :seConsommePendant :Ramadan ;
+               rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Msemens
+:Msemens rdf:type owl:NamedIndividual ,
+                  :Desserts ;
+         :estAssociéÀ :Miel ;
+         :seBoitAvec :The_a_la_menthe ;
+         rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Muscade
+:Muscade rdf:type owl:NamedIndividual ,
+                  :Epices ;
+         rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Navet
+:Navet rdf:type owl:NamedIndividual ,
+                :Legumes ;
+       rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Njimat_au_poulet
+:Njimat_au_poulet rdf:type owl:NamedIndividual ,
+                           :Plats_principaux ;
+                  :a_pour_niveau_de_difficulté :Facile ;
+                  :estPréparéAvec :Poulet ;
+                  :description "Le terme \"njimat\" signifie étoiles car c'est un plat préparé avec des pâtes en forme d'étoile."@ar-ma ;
+                  rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Noisettes
+:Noisettes rdf:type owl:NamedIndividual ,
+                    :Fruits_sec ;
+           rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Oeufs
+:Oeufs rdf:type owl:NamedIndividual ,
+                :Ingredients ;
+       rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Oignon
+:Oignon rdf:type owl:NamedIndividual ,
+                 :Legumes ;
+        rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Omnivore
+:Omnivore rdf:type owl:NamedIndividual ,
+                   :Regime_Alimentaire ;
+          rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Oranges
+:Oranges rdf:type owl:NamedIndividual ,
+                  :Fruits ;
+         rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Oranges_à_la_Cannelle
+:Oranges_à_la_Cannelle rdf:type owl:NamedIndividual ,
+                                :Desserts ;
+                       :estPréparéAvec :Cannelle ,
+                                       :Oranges ;
+                       :seConsommePendant :Ete ;
+                       rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Paprika
+:Paprika rdf:type owl:NamedIndividual ,
+                  :Epices ;
+         rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Perdrix
+:Perdrix rdf:type owl:NamedIndividual ,
+                  :Viandes ;
+         rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Petit_pois
+:Petit_pois rdf:type owl:NamedIndividual ,
+                     :Legumes ;
+            rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Pigeon
+:Pigeon rdf:type owl:NamedIndividual ,
+                 :Viandes ;
+        rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Piment
+:Piment rdf:type owl:NamedIndividual ,
+                 :Epices ;
+        rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Pistaches
+:Pistaches rdf:type owl:NamedIndividual ,
+                    :Fruits_sec ;
+           rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Poisson
+:Poisson rdf:type owl:NamedIndividual ,
+                  :Types_de_Viandes .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Poivron
+:Poivron rdf:type owl:NamedIndividual ,
+                  :Legumes ;
+         rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Pomme_de_Terre
+:Pomme_de_Terre rdf:type owl:NamedIndividual ,
+                         :Legumes ;
+                rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Post-Partum
+:Post-Partum rdf:type owl:NamedIndividual ,
+                      :Evenements .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Potiron
+:Potiron rdf:type owl:NamedIndividual ,
+                  :Legumes ;
+         rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Poulet
+:Poulet rdf:type owl:NamedIndividual ,
+                 :Viandes ;
+        rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Printemps
+:Printemps rdf:type owl:NamedIndividual ,
+                    :Saison ;
+           rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Pruneaux
+:Pruneaux rdf:type owl:NamedIndividual ,
+                   :Fruits_sec ;
+          rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Raisins_secs
+:Raisins_secs rdf:type owl:NamedIndividual ,
+                       :Fruits_sec ;
+              rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Ramadan
+:Ramadan rdf:type owl:NamedIndividual ,
+                  :Evenements ;
+         rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Ras_el_hanout
+:Ras_el_hanout rdf:type owl:NamedIndividual ,
+                        :Epices ;
+               rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Rayb
+:Rayb rdf:type owl:NamedIndividual ,
+               :Boissons ,
+               :Froide ;
+      :seConsommePendant :Ramadan ;
+      :description "Lait caillé" ;
+      rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Region_de_Fes
+:Region_de_Fes rdf:type owl:NamedIndividual ,
+                        :Origine_Geographique ;
+               rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Region_de_Marrakech
+:Region_de_Marrakech rdf:type owl:NamedIndividual ,
+                              :Origine_Geographique ;
+                     rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Region_de_Souss
+:Region_de_Souss rdf:type owl:NamedIndividual ,
+                          :Origine_Geographique ;
+                 rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Region_de_l_Atlas
+:Region_de_l_Atlas rdf:type owl:NamedIndividual ,
+                            :Origine_Geographique ;
+                   rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Region_du_Rif
+:Region_du_Rif rdf:type owl:NamedIndividual ,
+                        :Origine_Geographique ;
+               rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Rfissa
+:Rfissa rdf:type owl:NamedIndividual ,
+                 :Plats_principaux ;
+        :a_pour_niveau_de_difficulté :Difficile ;
+        :estPréparéAvec :Poulet ,
+                        :Safran ;
+        :seConsommePendant :Post-Partum ;
+        :description "C'est un plat qui est généralement servie à la femme après un accouchement car il contient beaucoup de graines de fénugrec ce qui favorise la lactation." ;
+        :nomAlternatif "Trid"@ar-ma ;
+        rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Richbond
+:Richbond rdf:type owl:NamedIndividual ,
+                   :Desserts ;
+          :a_pour_niveau_de_difficulté :Facile ;
+          :seConsommePendant :Aid_al_Adha ;
+          rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Rôti
+:Rôti rdf:type owl:NamedIndividual ,
+               :Technique_de_Cuisson ;
+      rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Safran
+:Safran rdf:type owl:NamedIndividual ,
+                 :Epices ;
+        rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Sahara
+:Sahara rdf:type owl:NamedIndividual ,
+                 :Origine_Geographique ;
+        rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Salade_Marocaine
+:Salade_Marocaine rdf:type owl:NamedIndividual ,
+                           :Entrees ;
+                  :estPréparéAvec :Concombre ,
+                                  :Tomates .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Sandwich_au_khli3
+:Sandwich_au_khli3 rdf:type owl:NamedIndividual ,
+                            :Street_food ;
+                   rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Sans_gluten
+:Sans_gluten rdf:type owl:NamedIndividual ,
+                      :Regime_Alimentaire ;
+             rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Sardines_farcies_à_la_chermoula
+:Sardines_farcies_à_la_chermoula rdf:type owl:NamedIndividual ,
+                                          :Entrees ;
+                                 :estPréparéAvec :Poisson ;
+                                 :seConsommePendant :Ete ;
+                                 rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Sauté
+:Sauté rdf:type owl:NamedIndividual ,
+                :Technique_de_Cuisson ;
+       rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Seffa
+:Seffa rdf:type owl:NamedIndividual ,
+                :Plats_principaux ;
+       :a_pour_niveau_de_difficulté :Intermédiaire ;
+       :est_prêt_au_bout_de <http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18#1h_à_2h> ;
+       rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Seffa_Medfouna
+:Seffa_Medfouna rdf:type owl:NamedIndividual ,
+                         :Plats_principaux ;
+                :a_pour_niveau_de_difficulté :Intermédiaire ;
+                :est_prêt_au_bout_de <http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18#1h_à_2h> ;
+                rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Seikouk
+:Seikouk rdf:type owl:NamedIndividual ,
+                  :Couscous ;
+         :a_pour_niveau_de_difficulté :Facile ;
+         :requiertTechniqueDeCuisson :Vapeur ;
+         :seBoitAvec :Lben .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Sellou
+:Sellou rdf:type owl:NamedIndividual ,
+                 :Desserts ;
+        :a_pour_niveau_de_difficulté :Difficile ;
+        :estPréparéAvec :Amandes ,
+                        :Cannelle ,
+                        :Miel ;
+        :seConsommePendant :Ramadan ;
+        :nomAlternatif "Zamita"@ar-ma ;
+        :tempsPréparation "Plusieurs jours" ;
+        rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Sfenj
+:Sfenj rdf:type owl:NamedIndividual ,
+                :Street_food ;
+       rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Skefkef
+:Skefkef rdf:type owl:NamedIndividual ,
+                  :Street_food ;
+         rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Soba
+:Soba rdf:type owl:NamedIndividual ,
+               :Soupes ;
+      :requiertTechniqueDeCuisson :Mijoté ;
+      rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Soupe_de_riz
+:Soupe_de_riz rdf:type owl:NamedIndividual ,
+                       :Soupes ;
+              :requiertTechniqueDeCuisson :Mijoté ;
+              rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Sous-terre
+:Sous-terre rdf:type owl:NamedIndividual ,
+                     :Technique_de_Cuisson ;
+            rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Tafarnout
+:Tafarnout rdf:type owl:NamedIndividual ,
+                    :Pains ;
+           :estAssociéÀ :Tajine_de_légumes ;
+           :estTypiqueDe :Region_de_Souss ;
+           :requiertTechniqueDeCuisson :Au_four ;
+           rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Tajine_agneau_et_coing_caramélisés
+:Tajine_agneau_et_coing_caramélisés rdf:type owl:NamedIndividual ,
+                                             :Tajines ;
+                                    :a_pour_niveau_de_difficulté :Intermédiaire ;
+                                    :est_prêt_au_bout_de <http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18#1h_à_2h> .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Tajine_agneau_et_pruneaux
+:Tajine_agneau_et_pruneaux rdf:type owl:NamedIndividual ,
+                                    :Tajines ;
+                           :a_pour_niveau_de_difficulté :Intermédiaire ;
+                           :estTypiqueDe :Region_de_Fes .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Tajine_de_crevettes
+:Tajine_de_crevettes rdf:type owl:NamedIndividual ,
+                              :Tajines ;
+                     :a_pour_niveau_de_difficulté :Intermédiaire .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Tajine_de_kefta
+:Tajine_de_kefta rdf:type owl:NamedIndividual ,
+                          :Tajines ;
+                 :a_pour_niveau_de_difficulté :Intermédiaire .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Tajine_de_légumes
+:Tajine_de_légumes rdf:type owl:NamedIndividual ,
+                            :Tajines ;
+                   :a_pour_niveau_de_difficulté :Intermédiaire ;
+                   :convientPour :Végétalien ,
+                                 :Végétarien .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Tajine_de_poisson
+:Tajine_de_poisson rdf:type owl:NamedIndividual ,
+                            :Tajines ;
+                   :a_pour_niveau_de_difficulté :Intermédiaire ;
+                   :estTypiqueDe :Region_de_Souss .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Tajine_de_viande_et_cardons
+:Tajine_de_viande_et_cardons rdf:type owl:NamedIndividual ,
+                                      :Tajines ;
+                             :a_pour_niveau_de_difficulté :Intermédiaire .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Tajine_en_terre_cuite
+:Tajine_en_terre_cuite rdf:type owl:NamedIndividual ,
+                                :Ustensiles ;
+                       rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Tajine_petits_pois_et_artichauts
+:Tajine_petits_pois_et_artichauts rdf:type owl:NamedIndividual ,
+                                           :Tajines ;
+                                  :a_pour_niveau_de_difficulté :Intermédiaire .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Tajine_poulet_aux_olives_et_citron_confit
+:Tajine_poulet_aux_olives_et_citron_confit rdf:type owl:NamedIndividual ,
+                                                    :Tajines ;
+                                           :a_pour_niveau_de_difficulté :Intermédiaire ;
+                                           :estTypiqueDe :Region_de_Fes ,
+                                                         :Region_de_Marrakech .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Tanjia
+:Tanjia rdf:type owl:NamedIndividual ,
+                 :Ustensiles ;
+        rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Tanjra
+:Tanjra rdf:type owl:NamedIndividual ,
+                 :Ustensiles ;
+        rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Tayb_ou_hari
+:Tayb_ou_hari rdf:type owl:NamedIndividual ,
+                       :Street_food ;
+              rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Tbiqa
+:Tbiqa rdf:type owl:NamedIndividual ,
+                :Ustensiles ;
+       rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Tektouka
+:Tektouka rdf:type owl:NamedIndividual ,
+                   :Entrees ;
+          :estAssociéÀ :Batbout ;
+          :estPréparéAvec :Poivron ;
+          :utilise :Paprika ;
+          rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/The_a_l_absinthe
+:The_a_l_absinthe rdf:type owl:NamedIndividual ,
+                           :Boissons ,
+                           :Chaude ;
+                  rdfs:label "f"@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/The_a_la_marjolaine
+:The_a_la_marjolaine rdf:type owl:NamedIndividual ,
+                              :Boissons ,
+                              :Chaude ;
+                     rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/The_a_la_menthe
+:The_a_la_menthe rdf:type owl:NamedIndividual ,
+                          :Boissons ,
+                          :Chaude ;
+                 :estAssociéÀ :Chebakia ;
+                 rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Thym
+:Thym rdf:type owl:NamedIndividual ,
+               :Epices ;
+      rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Tomates
+:Tomates rdf:type owl:NamedIndividual ,
+                  :Fruits ;
+         rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Tortilla
+:Tortilla rdf:type owl:NamedIndividual ,
+                   :Street_food ;
+          rdfs:label ""@es .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Vapeur
+:Vapeur rdf:type owl:NamedIndividual ,
+                 :Technique_de_Cuisson ;
+        rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Veau
+:Veau rdf:type owl:NamedIndividual ,
+               :Viandes ;
+      rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Veau_de_lait
+:Veau_de_lait rdf:type owl:NamedIndividual ,
+                       :Viandes ;
+              rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Viande_blanche
+:Viande_blanche rdf:type owl:NamedIndividual ,
+                         :Types_de_Viandes .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Viande_noire
+:Viande_noire rdf:type owl:NamedIndividual ,
+                       :Types_de_Viandes .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Viande_rouge
+:Viande_rouge rdf:type owl:NamedIndividual ,
+                       :Types_de_Viandes .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Volaille
+:Volaille rdf:type owl:NamedIndividual ,
+                   :Types_de_Viandes .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Végétalien
+:Végétalien rdf:type owl:NamedIndividual ,
+                     :Regime_Alimentaire ;
+            rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Végétarien
+:Végétarien rdf:type owl:NamedIndividual ,
+                     :Regime_Alimentaire ;
+            rdfs:label ""@fr .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Zaalouk
+:Zaalouk rdf:type owl:NamedIndividual ,
+                  :Entrees ;
+         :estPréparéAvec :Aubergine ;
+         :utilise :Paprika ;
+         rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/Zaazaa
+:Zaazaa rdf:type owl:NamedIndividual ,
+                 :Boissons ,
+                 :Froide ;
+        :estPréparéAvec :Amandes ,
+                        :Avocat ,
+                        :Dattes ;
+        :description "Boissons à base d'avocat et de fruits secs, c'est un vrai cocktail nutritif !" ;
+        rdfs:label ""@ar-ma .
+
+
+###  http://www.semanticweb.org/soukainabouhaid/ontologies/2025/3/untitled-ontology-18/hout_kwari
+:hout_kwari rdf:type owl:NamedIndividual ,
+                     :Plats_principaux ;
+            :a_pour_niveau_de_difficulté :Intermédiaire ;
+            :convientPour :Omnivore ;
+            :estPréparéAvec :Poisson ;
+            rdfs:label ""@ar-ma .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
