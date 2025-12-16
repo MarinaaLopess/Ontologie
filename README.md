@@ -2,7 +2,7 @@
 Ontologie OWL développée avec Protégé
 # Ontologie de la cuisine marocaine
 
-## 📌 Présentation générale
+## Présentation générale
 
 Ce projet consiste en la conception d’une **ontologie dédiée à la cuisine marocaine**, développée dans un cadre universitaire (projet de Master). La gastronomie marocaine, riche et culturellement ancrée, constitue un domaine particulièrement pertinent pour une modélisation sémantique en raison de la diversité des plats, des ingrédients, des techniques de préparation, des traditions régionales et des contextes festifs associés.
 
@@ -10,7 +10,7 @@ L’objectif principal est de proposer un **modèle formel, structuré et interr
 
 ---
 
-## 🎯 Objectifs de l’ontologie
+## Objectifs de l’ontologie
 
 L’ontologie vise notamment à permettre des requêtes complexes telles que :
 
@@ -31,7 +31,7 @@ Sur le plan pédagogique, ce travail permet de :
 
 ---
 
-## 📚 État de l’art et réutilisation de FoodOn
+## État de l’art et réutilisation de FoodOn
 
 Cette ontologie s’inscrit dans une logique de **complémentarité avec l’ontologie FoodOn**. Elle réutilise certains concepts génériques (ingrédients, techniques culinaires) tout en introduisant des éléments spécifiques à la culture marocaine :
 
@@ -43,7 +43,7 @@ Cette approche garantit une **interopérabilité avec FoodOn** tout en enrichiss
 
 ---
 
-## 🌍 Domaine et portée
+## Domaine et portée
 
 L’ontologie couvre exclusivement la **cuisine marocaine traditionnelle**, en prenant en compte :
 
@@ -64,7 +64,7 @@ La modélisation s’articule autour de six axes conceptuels : **plats, ingrédi
 
 ---
 
-## 🛠️ Méthodologie de construction
+## Méthodologie de construction
 
 La construction de l’ontologie repose sur une **approche hybride** (top-down et bottom-up) et a été réalisée avec **Protégé**.
 
@@ -80,7 +80,7 @@ La construction de l’ontologie repose sur une **approche hybride** (top-down e
 
 ---
 
-## 🧩 Modélisation ontologique
+## Modélisation ontologique
 
 L’ontologie comprend :
 
@@ -93,7 +93,7 @@ Bien que les propriétés d’objet et de données soient encore en cours de for
 
 ---
 
-## 🔎 Questions de compétence et requêtes SPARQL
+## Questions de compétence et requêtes SPARQL
 
 L’ontologie est conçue pour répondre à des questions de compétence telles que :
 
@@ -107,17 +107,17 @@ Ces requêtes démontrent la capacité de l’ontologie à croiser plusieurs dim
 
 ---
 
-## 👩‍🎓👨‍🎓 Contexte académique
+## Contexte académique
 
-Projet réalisé dans le cadre d’un **Master universitaire**, à des fins pédagogiques et scientifiques.
+Projet réalisé dans le cadre d’un **Master 1**, à des fins pédagogiques et scientifiques.
 
-## 🧾 Licence
+## Licence
 
 Cette ontologie est distribuée sous licence **Creative Commons Attribution 4.0 International (CC BY 4.0)**.
 
 ---
 
-## 🧑‍🤝‍🧑 Auteurs
+## Auteurs
 
 * BELLAHBIB Ayoub
 * BOUHAID Soukaïna  	
